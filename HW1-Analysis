@@ -1,0 +1,11 @@
+# put all answers for homework questions
+
+
+
+
+
+
+
+#to drop special plans
+plan.type.table <- full.ma.data %>% group_by(plan_type) %>% count() %>% arrange(-n)
+tot.obs <- as.numeric(count(full.ma.data %>% ungroup()))
