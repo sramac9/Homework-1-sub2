@@ -62,8 +62,7 @@ prem.data <- final.data.pen %>%
 fig.avg.enrollment <- final.data %>%
   group_by(fips, year) %>% 
   select(fips, year, avg_enrollment) %>% 
-  summarize(all_enroll=sum(avg_enrollment)) 
-  %>%
+  summarize(all_enroll=sum(avg_enrollment)) %>%
   ggplot(aes(x=as.factor(year),y=all_enroll)) + 
   stat_summary(fun.y="mean", geom="bar") +
   labs(
